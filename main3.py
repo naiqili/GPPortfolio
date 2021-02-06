@@ -89,6 +89,9 @@ elif args.dataset=='MSCI':
 elif args.dataset=='NYSE':
     data_path1 = './stock_data/NYSE_stock_phase%02d_lb%d.npz' % (args.phase, args.lb)
     data1 = np.load(data_path1, allow_pickle = True)
+elif args.dataset=='NYSE_N':
+    data_path1 = './stock_data/NYSE_N_stock_phase%02d_lb%d.npz' % (args.phase, args.lb)
+    data1 = np.load(data_path1, allow_pickle = True)
 
 def get_sparsity(adj):
     avg_deg = np.mean([np.count_nonzero(x) for x in adj])
